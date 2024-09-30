@@ -1,0 +1,43 @@
+version: '3.4'
+
+services:
+  rpsls.api:
+    container_name: rpsls.api
+    hostname: rpsls.api
+    image: ${DOCKER_REGISTRY-}rpslsapi
+    ports:
+      - "8082:8080"
+    networks:
+      - ww
+    build:
+      context: .
+      dockerfile: RPSLS.API/Dockerfile
+
+  rpsls.migrationrunner:
+    image: ${DOCKER_REGISTRY-}rpslsmigrationrunner
+    networks:
+      - ww
+    build:
+      context: .
+      target: final
+      dockerfile: RPSLS.MigrationRunner/Dockerfile
+    depends_on:
+      - rpsls.postgresdb
+
+  rpsls.postgresdb:
+    networks:
+      - ww
+    image: "postgres"
+    container_name: rpsls.postgresdb
+
+  pgAdmin:
+    networks:
+      - ww
+    image: "dpage/pgadmin4"
+    container_name: pgAdmin
+
+networks:
+  ww:
+volumes:
+  local_pgdata:
+  pgadmin-data:
