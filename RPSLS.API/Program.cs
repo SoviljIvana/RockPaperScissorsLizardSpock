@@ -18,7 +18,6 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(typeof(GetAllChoicesQuery).Assembly));
 builder.Services.AddServiceDataLayer(builder.Configuration);
 builder.Services.AddAutoMapper(typeof(ChoicesProfileMapper));
-//builder.Services.AddAutoMapper(typeof(ChoiceProfileMapper));
 
 builder.Services.AddCors(options =>
 {
@@ -32,7 +31,6 @@ builder.Services.AddCors(options =>
 }); 
 var app = builder.Build();
 
-app.UseMetricServer(); //default metrics set up by prometheus-net(navigate to /metrics)
 
 if (app.Environment.IsDevelopment())
 {
