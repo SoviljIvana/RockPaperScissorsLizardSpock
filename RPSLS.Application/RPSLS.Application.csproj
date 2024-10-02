@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\RPSLS.Infrastructure\RPSLS.Infrastructure.csproj" />
+    <ProjectReference Include="..\RPSLS.Infrastructure\RPSLS.Infrastructure.csproj" />
     <ProjectReference Include="..\RPSLS.Data\RPSLS.Data.csproj" />
   </ItemGroup>
 
