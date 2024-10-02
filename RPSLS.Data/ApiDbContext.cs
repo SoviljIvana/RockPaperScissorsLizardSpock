@@ -7,6 +7,7 @@ namespace RPSLS.Data
     {
         public DbSet<Choice> Choices { get; set; }
         public DbSet<Player> Players { get; set; }
+        public DbSet<Computer> Computers { get; set; }
 
         public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
         {

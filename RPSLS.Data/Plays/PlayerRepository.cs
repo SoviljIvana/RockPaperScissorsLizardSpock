@@ -14,7 +14,5 @@ namespace RPSLS.Data.Plays
 
             return Task.Run(() => result.Entity);
         }
-
-
     }
 }
