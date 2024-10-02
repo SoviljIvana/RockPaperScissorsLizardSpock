@@ -12,13 +12,20 @@ namespace RPSLS.Application.Choices.Queries.GetRandomChoice
 
         public async Task<ChoiceRepresentation> Handle(GetRandomChoiceQuery request, CancellationToken cancellationToken)
         {
-            var randomNumber = 1;
+            var randomNumber = GetRandomNumber();
 
             var choice = await _choiceRepository.GetChoiceById(randomNumber);
 
             var result = _mapper.Map<Models.Choice, ChoiceRepresentation>(choice!);
 
             return result;
+        }
+
+        private static int GetRandomNumber()
+        {
+            Random random = new();
+
+            return random.Next(1, 5);
         }
     }
 }
