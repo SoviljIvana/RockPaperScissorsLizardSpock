@@ -1,5 +1,4 @@
-﻿using AutoFixture;
-using AutoMapper;
+﻿using AutoMapper;
 using FluentAssertions;
 using RPSLS.API.Common.Mappers;
 using RPSLS.API.Requests.Choices;
@@ -11,17 +10,6 @@ namespace RPSLS.Tests.API.Common.Mappers
 {
     public class ChoicesProfileMapperTests
     {
-        private static Fixture? _fixture;
-
-        public ChoicesProfileMapperTests()
-        {
-            _fixture = new Fixture();
-
-            _fixture.Behaviors.OfType<ThrowingRecursionBehavior>().ToList()
-                .ForEach(b => _fixture.Behaviors.Remove(b));
-            _fixture.Behaviors.Add(new OmitOnRecursionBehavior());
-        }
-
         [Theory]
         [AutoMoqData]
         public void ChoicesProfileMapper_ShouldMap_SourceToDestination(AddChoiceRequest source, ChoicesProfileMapper profileMapper)
