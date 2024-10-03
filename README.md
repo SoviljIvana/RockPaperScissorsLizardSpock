@@ -48,8 +48,12 @@ The game follows these rules:
 
 5.  **Postgres db setup: http://localhost:999/login?next=%2F (for credentials follow docker-compose.override.yml file)**
 
-6.  **Use POST /choice endpoint to add all choices in database in the following order:
-{id: 1, name: 'rock'}, {id: 2, name: 'paper'}, {id: 3, name: 'scissors'}, {id: 4, name: 'spock'}, {id: 5, name: 'lizard'}**
+6.  **Use POST /choice endpoint to add all choices in database in the following order:**
+{id: 1, name: 'rock'},
+{id: 2, name: 'paper'},
+{id: 3, name: 'scissors'},
+{id: 4, name: 'spock'},
+{id: 5, name: 'lizard'}
 
 ### Author: 
 Sovilj Ivana 
