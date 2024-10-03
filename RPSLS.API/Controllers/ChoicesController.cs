@@ -16,7 +16,7 @@ namespace RPSLS.API.Controllers
         private readonly IMediator _mediator = mediator;
         private readonly IMapper _mapper = mapper;
 
-        [HttpPost("choices")]
+        [HttpPost("choice")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> AddChoice(AddChoiceRequest request)

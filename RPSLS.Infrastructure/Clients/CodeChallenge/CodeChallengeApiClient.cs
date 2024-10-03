@@ -1,4 +1,5 @@
 ﻿using System.Net.Http.Headers;
+using System.Text.RegularExpressions;
 
 namespace RPSLS.Infrastructure.Clients.CodeChallenge
 {
@@ -8,7 +9,7 @@ namespace RPSLS.Infrastructure.Clients.CodeChallenge
 
         private readonly string urlParameters = "";
 
-        public async Task<string> GetRandomNumber()
+        public async Task<int> GetRandomNumber()
         {
             HttpClient client = new()
             {
@@ -25,13 +26,32 @@ namespace RPSLS.Infrastructure.Clients.CodeChallenge
             {
                 // Parse the response body.
                 client.Dispose();
-                return await response.Content.ReadAsStringAsync();
+
+                var result = FindAndExtractNumberFromString(response.Content.ReadAsStringAsync().Result);
+
+                return result;
             }
 
             client.Dispose();
 
-            return "no response";
+            return 0;
+        }
 
+
+        private static int FindAndExtractNumberFromString(string responseMessageContent)
+        {
+            var resultString = Regex.Match(responseMessageContent, @"\d+").Value;
+            var result = int.Parse(resultString);
+
+            if (result > 5)
+            {
+                Random random = new();
+                return random.Next(1, 5);
+            }
+            else
+            {
+                return result;
+            }
         }
     }
 }

@@ -2,6 +2,6 @@
 {
     public interface ICodeChallengeApiClient
     {
-        Task<string> GetRandomNumber();
+        Task<int> GetRandomNumber();
     }
 }

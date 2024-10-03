@@ -2,7 +2,6 @@
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using RPSLS.Data.Choices;
-using RPSLS.Data.Computers;
 using RPSLS.Data.Plays;
 using System.Diagnostics.CodeAnalysis;
 
@@ -20,8 +19,7 @@ namespace RPSLS.Data.Extensions
             });
   
             services.AddScoped<IChoiceRepository, ChoiceRepository>();
-            services.AddScoped<IPlayerRepository, PlayerRepository>();
-            services.AddScoped<IComputerRepository, ComputerRepository>();
+            services.AddScoped<IPlayRepository, PlayRepository>();
         }
     }
 }
