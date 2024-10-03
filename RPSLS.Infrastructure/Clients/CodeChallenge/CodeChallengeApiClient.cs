@@ -16,18 +16,15 @@ namespace RPSLS.Infrastructure.Clients.CodeChallenge
                 BaseAddress = new Uri(URL)
             };
 
-            // Add an Accept header for JSON format.
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
 
-            // List data response.
             HttpResponseMessage response = client.GetAsync(urlParameters).Result;
 
             if (response.IsSuccessStatusCode)
             {
-                // Parse the response body.
-                client.Dispose();
-
                 var result = FindAndExtractNumberFromString(response.Content.ReadAsStringAsync().Result);
+
+                client.Dispose();
 
                 return result;
             }
