@@ -8,7 +8,8 @@ namespace RPSLS.API.Common.Mappers
     {
         public PlayProfileMapper()
         {
-            CreateMap<PlayRequest, PlayCommand>();
+            CreateMap<PlayRequest, PlayCommand>()
+               .ForMember(d => d.Opponent1, opt => opt.MapFrom(s => s.Player));
         }
     }
 }

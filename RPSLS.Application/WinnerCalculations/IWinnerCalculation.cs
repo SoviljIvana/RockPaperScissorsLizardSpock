@@ -2,6 +2,6 @@
 {
     public interface IWinnerCalculation
     {
-        int CalculateWinner(int player1, int player2);
+        string CalculateWinner(int player1, int player2);
     }
 }

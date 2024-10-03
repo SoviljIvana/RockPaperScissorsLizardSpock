@@ -5,6 +5,7 @@ namespace RPSLS.Application.Play.Commands
 {
     public class PlayCommand : IRequest<PlayRepresentation>
     {
-        public int Player { get; set; }
+        public int Opponent1 { get; set; }
+        public int Opponent2 { get; set; }
     }
 }
