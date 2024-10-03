@@ -15,6 +15,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSLS.Models", "RPSLS.Model
 EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{3EBF2A1E-C529-4B86-AD67-B1C1F2F8B2DF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSLS.Infrastructure", "RPSLS.Infrastructure\RPSLS.Infrastructure.csproj", "{2257D3ED-B6A5-427F-9194-5AD35196D1C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RPSLS.Tests", "RPSLS.Tests\RPSLS.Tests.csproj", "{B4E8205E-5160-4432-BF44-64F4FE7CD5FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +49,14 @@ Global
 		{3EBF2A1E-C529-4B86-AD67-B1C1F2F8B2DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3EBF2A1E-C529-4B86-AD67-B1C1F2F8B2DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3EBF2A1E-C529-4B86-AD67-B1C1F2F8B2DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2257D3ED-B6A5-427F-9194-5AD35196D1C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2257D3ED-B6A5-427F-9194-5AD35196D1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2257D3ED-B6A5-427F-9194-5AD35196D1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2257D3ED-B6A5-427F-9194-5AD35196D1C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E8205E-5160-4432-BF44-64F4FE7CD5FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E8205E-5160-4432-BF44-64F4FE7CD5FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E8205E-5160-4432-BF44-64F4FE7CD5FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E8205E-5160-4432-BF44-64F4FE7CD5FC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

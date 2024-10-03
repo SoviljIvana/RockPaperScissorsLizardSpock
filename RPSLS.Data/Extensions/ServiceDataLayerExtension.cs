@@ -19,7 +19,7 @@ namespace RPSLS.Data.Extensions
             });
   
             services.AddScoped<IChoiceRepository, ChoiceRepository>();
-            services.AddScoped<IPlayerRepository, PlayerRepository>();
+            services.AddScoped<IPlayRepository, PlayRepository>();
         }
     }
 }

@@ -6,7 +6,7 @@ namespace RPSLS.Data
     public class ApiDbContext : DbContext
     {
         public DbSet<Choice> Choices { get; set; }
-        public DbSet<Player> Players { get; set; }
+        public DbSet<Play> Plays { get; set; }
 
         public ApiDbContext(DbContextOptions<ApiDbContext> options) : base(options)
         {
@@ -17,11 +17,8 @@ namespace RPSLS.Data
             modelBuilder.Entity<Choice>()
                 .ToTable(nameof(Choice));
 
-            modelBuilder.Entity<Computer>()
-                .ToTable(nameof(Computer));
-
-            modelBuilder.Entity<Player>()
-                .ToTable(nameof(Player));
+            modelBuilder.Entity<Play>()
+                .ToTable(nameof(Play));
         }
     }
 }

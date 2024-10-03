@@ -2,19 +2,17 @@
 
 namespace RPSLS.Data.Plays
 {
-    public class PlayerRepository(ApiDbContext apiDbContext) : IPlayerRepository
+    public class PlayRepository(ApiDbContext apiDbContext) : IPlayRepository
     {
         private readonly ApiDbContext _apiDbContext = apiDbContext;
 
-        public Task<Player> AddPlayer(Player player)
+        public Task<Play> Play(Play play)
         {
-            var result = _apiDbContext.Players?.Add(player)!;
+            var result = _apiDbContext.Plays?.Add(play)!;
 
             _apiDbContext.SaveChangesAsync();
 
             return Task.Run(() => result.Entity);
         }
-
-
     }
 }
