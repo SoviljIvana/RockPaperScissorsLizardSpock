@@ -40,13 +40,13 @@ The game follows these rules:
    ```bash
    git clone https://github.com/SoviljIvana/RockPaperScissorsLizardSpock
    
-2. **docker-compose Set As Startup Project**
+2. **Set docker-compose Set As Startup Project**
 
-3.  **run docker compose**
+3.  **Run docker compose**
 
-4.  **open swagger http://localhost:8082/swagger/index.html**
+4.  **Open swagger http://localhost:8082/swagger/index.html**
 
-5.  **postgres db: http://localhost:999/login?next=%2F (for credentials follow docker-compose.override.yml file)**
+5.  **Postgres db setup: http://localhost:999/login?next=%2F (for credentials follow docker-compose.override.yml file)**
 
 
 ### Author: 
